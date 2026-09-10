@@ -47,6 +47,7 @@ h3,
   font-family:"Cormorant Garamond",serif;
 }
 
+
 /* =========================
    CHAPTER / SLIDE SYSTEM
 ========================= */
@@ -772,6 +773,631 @@ section.active{
 }
 
 
+/* =========================================================
+   FINAL EXAM - NEW FINAL CHAPTER
+========================================================= */
+
+.final-exam-page{
+
+  text-align:center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255,255,255,.95),
+      rgba(235,235,235,.8)
+    );
+
+}
+
+
+/* Small heading */
+
+.exam-eyebrow{
+
+  font-size:11px;
+
+  letter-spacing:5px;
+
+  text-transform:uppercase;
+
+  color:#777;
+
+  margin-bottom:12px;
+
+}
+
+
+/* Main title */
+
+.final-exam-title{
+
+  font-family:"Cormorant Garamond",serif;
+
+  font-size:clamp(48px,7vw,78px);
+
+  line-height:1;
+
+  margin-bottom:12px;
+
+}
+
+.exam-subtitle{
+
+  color:#777;
+
+  line-height:1.7;
+
+  margin-bottom:30px;
+
+}
+
+
+/* =========================
+   EXAM BOX
+========================= */
+
+.exam-box{
+
+  max-width:650px;
+
+  margin:auto;
+
+  padding:42px 30px;
+
+  background:rgba(255,255,255,.9);
+
+  border:1px solid #d6d6d6;
+
+  border-radius:25px;
+
+  box-shadow:
+
+    0 20px 60px rgba(0,0,0,.10);
+
+  position:relative;
+
+  overflow:hidden;
+
+}
+
+
+/* Red alert */
+
+.exam-alert{
+
+  display:inline-block;
+
+  padding:7px 14px;
+
+  border:1px solid #bbb;
+
+  border-radius:30px;
+
+  font-size:10px;
+
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+
+  margin-bottom:22px;
+
+  color:#666;
+
+}
+
+
+/* Department */
+
+.department{
+
+  font-size:12px;
+
+  letter-spacing:3px;
+
+  color:#999;
+
+  margin-bottom:15px;
+
+}
+
+
+/* Exam question */
+
+.exam-question{
+
+  font-family:"Cormorant Garamond",serif;
+
+  font-size:31px;
+
+  margin-bottom:12px;
+
+}
+
+.exam-description{
+
+  font-size:14px;
+
+  line-height:1.8;
+
+  color:#777;
+
+}
+
+
+/* Start button */
+
+.start-exam-btn{
+
+  margin-top:28px;
+
+  padding:15px 30px;
+
+  border:1px solid #aaa;
+
+  border-radius:50px;
+
+  background:#333;
+
+  color:white;
+
+  font-family:Poppins;
+
+  cursor:pointer;
+
+  transition:.3s;
+
+}
+
+.start-exam-btn:hover{
+
+  background:#555;
+
+  transform:translateY(-3px);
+
+}
+
+
+/* =========================
+   SCANNER
+========================= */
+
+.scanner{
+
+  display:none;
+
+  margin-top:30px;
+
+}
+
+.scanner-title{
+
+  font-size:12px;
+
+  letter-spacing:3px;
+
+  text-transform:uppercase;
+
+  color:#777;
+
+  margin-bottom:18px;
+
+}
+
+.scan-bar{
+
+  width:100%;
+
+  height:8px;
+
+  background:#e3e3e3;
+
+  border-radius:20px;
+
+  overflow:hidden;
+
+}
+
+.scan-progress{
+
+  width:0%;
+
+  height:100%;
+
+  background:#333;
+
+  border-radius:20px;
+
+  transition:width .2s linear;
+
+}
+
+.scan-percent{
+
+  margin-top:12px;
+
+  font-size:13px;
+
+  color:#777;
+
+}
+
+.scan-result{
+
+  display:none;
+
+  margin-top:20px;
+
+  font-family:"Cormorant Garamond",serif;
+
+  font-size:27px;
+
+}
+
+
+/* =========================
+   SECRET CARD
+========================= */
+
+.secret-card-wrapper{
+
+  display:none;
+
+  margin-top:30px;
+
+  perspective:1200px;
+
+}
+
+.secret-card{
+
+  width:100%;
+
+  max-width:470px;
+
+  height:260px;
+
+  margin:auto;
+
+  position:relative;
+
+  cursor:pointer;
+
+  transform-style:preserve-3d;
+
+  transition:transform 1s ease;
+
+}
+
+.secret-card.revealed{
+
+  transform:rotateY(180deg);
+
+}
+
+.secret-face{
+
+  position:absolute;
+
+  inset:0;
+
+  backface-visibility:hidden;
+
+  border-radius:22px;
+
+  border:1px solid #ccc;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+
+  align-items:center;
+
+  padding:30px;
+
+  box-shadow:
+
+    0 15px 40px rgba(0,0,0,.10);
+
+}
+
+
+/* Front */
+
+.secret-front{
+
+  background:#333;
+
+  color:white;
+
+}
+
+.secret-front .lock{
+
+  font-size:48px;
+
+  margin-bottom:15px;
+
+}
+
+.secret-front h3{
+
+  font-family:"Cormorant Garamond",serif;
+
+  font-size:31px;
+
+  font-weight:normal;
+
+}
+
+.secret-front p{
+
+  font-size:11px;
+
+  letter-spacing:2px;
+
+  margin-top:10px;
+
+  opacity:.65;
+
+}
+
+
+/* Back */
+
+.secret-back{
+
+  background:white;
+
+  color:#333;
+
+  transform:rotateY(180deg);
+
+}
+
+.secret-back .result-label{
+
+  font-size:10px;
+
+  letter-spacing:3px;
+
+  text-transform:uppercase;
+
+  color:#999;
+
+}
+
+.secret-back h3{
+
+  font-family:"Cormorant Garamond",serif;
+
+  font-size:36px;
+
+  margin:12px 0;
+
+}
+
+.secret-back p{
+
+  font-size:13px;
+
+  color:#777;
+
+  line-height:1.7;
+
+}
+
+
+/* =========================
+   FINAL QUESTION
+========================= */
+
+.real-question{
+
+  display:none;
+
+  margin-top:35px;
+
+  animation:finalReveal .8s ease;
+
+}
+
+@keyframes finalReveal{
+
+  from{
+
+    opacity:0;
+
+    transform:translateY(25px);
+
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+  }
+
+}
+
+.question-emoji{
+
+  font-size:45px;
+
+  margin-bottom:10px;
+
+}
+
+.real-question h3{
+
+  font-family:"Cormorant Garamond",serif;
+
+  font-size:38px;
+
+  font-weight:normal;
+
+  margin-bottom:8px;
+
+}
+
+.real-question .ask{
+
+  font-size:18px;
+
+  color:#666;
+
+  margin-bottom:25px;
+
+}
+
+
+/* Answer buttons */
+
+.answer-options{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:11px;
+
+  max-width:550px;
+
+  margin:auto;
+
+}
+
+.answer-options button{
+
+  padding:14px 18px;
+
+  background:white;
+
+  border:1px solid #d2d2d2;
+
+  border-radius:15px;
+
+  font-family:Poppins;
+
+  color:#333;
+
+  cursor:pointer;
+
+  transition:.3s;
+
+}
+
+.answer-options button:hover{
+
+  background:#333;
+
+  color:white;
+
+  transform:scale(1.02);
+
+}
+
+
+/* Answer result */
+
+.answer-result{
+
+  display:none;
+
+  margin-top:25px;
+
+  padding:25px;
+
+  background:#f1f1f1;
+
+  border-radius:18px;
+
+  animation:finalReveal .7s ease;
+
+}
+
+.answer-result .emoji{
+
+  font-size:38px;
+
+  margin-bottom:8px;
+
+}
+
+.answer-result h4{
+
+  font-family:"Cormorant Garamond",serif;
+
+  font-size:27px;
+
+  font-weight:normal;
+
+  margin-bottom:8px;
+
+}
+
+.answer-result p{
+
+  font-size:14px;
+
+  line-height:1.8;
+
+  color:#666;
+
+}
+
+
+/* =========================
+   FINAL EMOTIONAL MESSAGE
+========================= */
+
+.final-ending{
+
+  display:none;
+
+  margin-top:35px;
+
+  padding-top:30px;
+
+  border-top:1px solid #ddd;
+
+  animation:finalReveal 1s ease;
+
+}
+
+.final-ending p{
+
+  font-family:"Cormorant Garamond",serif;
+
+  font-size:22px;
+
+  line-height:1.7;
+
+  margin-bottom:18px;
+
+}
+
+.final-ending .highlight{
+
+  font-size:27px;
+
+  color:#333;
+
+}
+
+.final-ending .forever{
+
+  font-size:32px;
+
+  margin-top:25px;
+
+}
+
+
 /* =========================
    MUSIC
 ========================= */
@@ -881,6 +1507,24 @@ section.active{
 
   }
 
+  .final-exam-title{
+
+    font-size:48px;
+
+  }
+
+  .exam-box{
+
+    padding:35px 20px;
+
+  }
+
+  .secret-card{
+
+    height:280px;
+
+  }
+
 }
 
 
@@ -940,7 +1584,7 @@ section::-webkit-scrollbar-thumb{
 
   <span id="chapterNumber">
 
-    01 / 08
+    01 / 10
 
   </span>
 
@@ -1117,7 +1761,9 @@ section::-webkit-scrollbar-thumb{
       apram pesama irukka mudiyama pochu. 😂❤️"
 
       I like u soo much Azhagieeee...
+
       This is my little surprise for u....😂
+
       Be with me forever... ❤️
 
     </p>
@@ -1400,7 +2046,7 @@ section::-webkit-scrollbar-thumb{
 
         <h3>
 
-          Our Shopping Date🛍️💕
+          Our Shopping Date 🛍️💕
 
         </h3>
 
@@ -1443,7 +2089,7 @@ section::-webkit-scrollbar-thumb{
 
         <p>
 
-          "Naane oru gift uh than laaaa...
+          "Naane oru gift uh thaan laaa...
 
           but my love for you is something that no phone
 
@@ -2102,7 +2748,7 @@ section::-webkit-scrollbar-thumb{
 
 
 <!-- =========================
-     FINAL CHAPTER
+     CHAPTER 9 - LOVE LETTER
 ========================= -->
 
 <section>
@@ -2193,11 +2839,436 @@ section::-webkit-scrollbar-thumb{
 </section>
 
 
+<!-- =====================================================
+     CHAPTER 10 - FINAL EXAM
+===================================================== -->
+
+<section class="final-exam-page">
+
+  <div class="container">
+
+    <div class="exam-eyebrow">
+
+      FINAL CHAPTER • 10 / 10
+
+    </div>
+
+
+    <h2 class="final-exam-title">
+
+      One Last Question... 👀
+
+    </h2>
+
+
+    <p class="exam-subtitle">
+
+      You survived 6 months of us... 😂❤️<br>
+
+      Enga ponalum test uh than daaa..Sattieee.
+
+    </p>
+
+
+    <div class="exam-box" id="examBox">
+
+
+      <!-- EXAM INTRO -->
+
+      <div id="examIntro">
+
+        <div class="exam-alert">
+
+          ⚠️ IMPORTANT • FINAL VERIFICATION
+
+        </div>
+
+
+        <div class="department">
+
+          RELATIONSHIP DEPARTMENT™
+        </div>
+
+
+        <div class="exam-question">
+
+          Our 6-month Journey verification
+          is almost complete. 😌
+
+        </div>
+
+
+        <p class="exam-description">
+
+          One final question remains unanswered.
+
+          <br>
+
+          This exam cannot be skipped.
+
+          <br>
+
+          No cheating. 👀😂
+
+        </p>
+
+
+        <button
+          class="start-exam-btn"
+          onclick="startFinalExam()">
+
+          START FINAL EXAM 🔍
+
+        </button>
+
+      </div>
+
+
+      <!-- SCANNER -->
+
+      <div class="scanner" id="scanner">
+
+        <div class="scanner-title">
+
+          🔍 Scanning your heart...
+
+        </div>
+
+
+        <div class="scan-bar">
+
+          <div class="scan-progress"
+               id="scanProgress">
+
+          </div>
+
+        </div>
+
+
+        <div class="scan-percent"
+             id="scanPercent">
+
+          0%
+
+        </div>
+
+
+        <div class="scan-result"
+             id="scanResult">
+
+          ❤️ ERROR: TOO MUCH FRADUU DETECTED 😂
+
+        </div>
+
+      </div>
+
+
+      <!-- SECRET CARD -->
+
+      <div class="secret-card-wrapper"
+           id="secretCardWrapper">
+
+        <p style="margin-bottom:15px;color:#777;font-size:13px;">
+
+          Something has been found...
+
+        </p>
+
+
+        <div class="secret-card"
+             id="secretCard"
+             onclick="revealSecretCard()">
+
+
+          <!-- FRONT -->
+
+          <div class="secret-face secret-front">
+
+            <div class="lock">
+
+              🔐
+
+            </div>
+
+
+            <h3>
+
+              TOP SECRET
+
+            </h3>
+
+
+            <p>
+
+              CLICK TO REVEAL
+
+            </p>
+
+          </div>
+
+
+          <!-- BACK -->
+
+          <div class="secret-face secret-back">
+
+            <div class="result-label">
+
+              FINAL RESULT
+
+            </div>
+
+
+            <h3>
+
+              YOU ARE GUILTY. ❤️
+
+            </h3>
+
+
+            <p>
+
+              Guilty of stealing someone's heart
+
+              and refusing to give it back. 😂❤️
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- REAL QUESTION -->
+
+      <div class="real-question"
+           id="realQuestion">
+
+
+        <div class="question-emoji">
+
+          💌
+
+        </div>
+
+
+        <h3>
+
+          Okay... now be honest. 👀
+
+        </h3>
+
+
+        <p class="ask">
+
+          Did you really like me?
+
+          <br>
+
+          <strong>
+
+            Show me how much you like me. 😂❤️
+
+          </strong>
+
+        </p>
+
+
+        <div class="answer-options">
+
+
+          <button onclick="finalAnswer(1)">
+
+            🤏 A little bit...
+
+          </button>
+
+
+          <button onclick="finalAnswer(2)">
+
+            😊 More than I expected
+
+          </button>
+
+
+          <button onclick="finalAnswer(3)">
+
+            🥰 A LOT... obviously!
+
+          </button>
+
+
+          <button onclick="finalAnswer(4)">
+
+            ❤️ Enough to stay through all
+            the ups & downs
+
+          </button>
+
+
+          <button onclick="finalAnswer(5)">
+
+            ♾️ There is no measurement for it
+
+          </button>
+
+
+        </div>
+
+
+        <!-- ANSWER -->
+
+        <div class="answer-result"
+             id="answerResult">
+
+
+          <div class="emoji"
+               id="answerEmoji">
+
+            ❤️
+
+          </div>
+
+
+          <h4 id="answerTitle">
+
+          </h4>
+
+
+          <p id="answerText">
+
+          </p>
+
+
+        </div>
+
+
+        <!-- FINAL ENDING -->
+
+        <div class="final-ending"
+             id="finalEnding">
+
+
+          <p>
+
+            But honestly...
+
+          </p>
+
+
+          <p>
+
+            I don't need you to measure
+
+            how much you like me. ❤️
+
+          </p>
+
+
+          <p>
+
+            I just want you to stay.
+
+          </p>
+
+
+          <p>
+
+            Stay when everything is beautiful.
+
+            <br>
+
+            Stay when life gets difficult.
+
+            <br>
+
+            Stay through the laughs,
+
+            the silly fights,
+
+            the random plans,
+
+            the silence,
+
+            and everything in between.
+
+          </p>
+
+
+          <p>
+
+            Because these six months...
+
+          </p>
+
+
+          <p class="highlight">
+
+            aren't the end of our story.
+
+          </p>
+
+
+          <p>
+
+            Summa Just Joking... 😄
+
+            Over Scene la theva kedaiyathu... 😄
+
+            But I am always here for you. ✨
+
+          </p>
+
+
+          <p class="forever">
+
+            So...
+
+            <br>
+
+            Are you okayyyy for
+
+            Chapter 2? 👀❤️
+
+          </p>
+
+
+          <div style="font-size:45px;margin-top:25px;">
+
+            ❤️
+
+          </div>
+
+
+          <p style="font-size:14px;color:#999;">
+
+            Half Year down...
+
+            forever to go. ♾️
+
+          </p>
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
 <script>
 
-/* =====================================
+
+/* =====================================================
    CHAPTER NAVIGATION
-===================================== */
+===================================================== */
 
 const sections = document.querySelectorAll("section");
 
@@ -2205,9 +3276,11 @@ let currentSection = 0;
 
 const totalSections = sections.length;
 
-const nextBtn = document.getElementById("nextBtn");
+const nextBtn =
+document.getElementById("nextBtn");
 
-const prevBtn = document.getElementById("prevBtn");
+const prevBtn =
+document.getElementById("prevBtn");
 
 const chapterNumber =
 document.getElementById("chapterNumber");
@@ -2228,7 +3301,7 @@ function showSection(index){
   }
 
 
-  sections.forEach((section, i) => {
+  sections.forEach((section) => {
 
     section.classList.remove("active");
 
@@ -2238,7 +3311,8 @@ function showSection(index){
   currentSection = index;
 
 
-  sections[currentSection].classList.add("active");
+  sections[currentSection]
+    .classList.add("active");
 
 
   updateNavigation();
@@ -2249,12 +3323,15 @@ function showSection(index){
 function updateNavigation(){
 
   chapterNumber.textContent =
-    String(currentSection + 1).padStart(2,"0")
+
+    String(currentSection + 1)
+      .padStart(2,"0")
+
     + " / "
-    + String(totalSections).padStart(2,"0");
 
+    + String(totalSections)
+      .padStart(2,"0");
 
-  /* First chapter */
 
   if(currentSection === 0){
 
@@ -2267,15 +3344,15 @@ function updateNavigation(){
   }
 
 
-  /* Last chapter */
-
   if(currentSection === totalSections - 1){
 
-    nextBtn.textContent = "Start Again ↻";
+    nextBtn.textContent =
+      "Start Again ↻";
 
   }else{
 
-    nextBtn.textContent = "Next →";
+    nextBtn.textContent =
+      "Next →";
 
   }
 
@@ -2312,7 +3389,7 @@ prevBtn.addEventListener("click", () => {
 });
 
 
-/* START JOURNEY BUTTON */
+/* START JOURNEY */
 
 document
 .getElementById("startJourney")
@@ -2323,9 +3400,9 @@ document
 });
 
 
-/* =====================================
+/* =====================================================
    KEYBOARD NAVIGATION
-===================================== */
+===================================================== */
 
 document.addEventListener("keydown", (event) => {
 
@@ -2353,9 +3430,9 @@ document.addEventListener("keydown", (event) => {
 });
 
 
-/* =====================================
+/* =====================================================
    COUNTER
-===================================== */
+===================================================== */
 
 const startDate =
 new Date("2026-03-15T00:00:00");
@@ -2373,19 +3450,27 @@ function updateCounter(){
     Math.floor(diff / 1000);
 
 
-  document.getElementById("days").textContent =
+  document.getElementById("days")
+    .textContent =
     Math.floor(sec / 86400);
 
 
-  document.getElementById("hours").textContent =
-    Math.floor((sec % 86400) / 3600);
+  document.getElementById("hours")
+    .textContent =
+    Math.floor(
+      (sec % 86400) / 3600
+    );
 
 
-  document.getElementById("minutes").textContent =
-    Math.floor((sec % 3600) / 60);
+  document.getElementById("minutes")
+    .textContent =
+    Math.floor(
+      (sec % 3600) / 60
+    );
 
 
-  document.getElementById("seconds").textContent =
+  document.getElementById("seconds")
+    .textContent =
     sec % 60;
 
 }
@@ -2396,17 +3481,15 @@ updateCounter();
 setInterval(updateCounter,1000);
 
 
-/* =====================================
+/* =====================================================
    MUSIC
-===================================== */
+===================================================== */
 
 const music =
 document.getElementById("music");
 
-
 const musicBtn =
 document.getElementById("musicBtn");
-
 
 let playing = false;
 
@@ -2429,7 +3512,9 @@ musicBtn.addEventListener("click", () => {
       })
       .catch(() => {
 
-        alert("Please click the music button again to start the song.");
+        alert(
+          "Please click the music button again to start the song."
+        );
 
       });
 
@@ -2440,9 +3525,236 @@ musicBtn.addEventListener("click", () => {
 });
 
 
-/* =====================================
+/* =====================================================
+   FINAL EXAM
+===================================================== */
+
+function startFinalExam(){
+
+  const intro =
+    document.getElementById("examIntro");
+
+  const scanner =
+    document.getElementById("scanner");
+
+  const progress =
+    document.getElementById("scanProgress");
+
+  const percent =
+    document.getElementById("scanPercent");
+
+  const result =
+    document.getElementById("scanResult");
+
+  const card =
+    document.getElementById("secretCardWrapper");
+
+
+  intro.style.display = "none";
+
+  scanner.style.display = "block";
+
+
+  let value = 0;
+
+
+  const scan = setInterval(() => {
+
+    value += 2;
+
+
+    progress.style.width =
+      value + "%";
+
+
+    percent.textContent =
+      value + "%";
+
+
+    if(value >= 100){
+
+      clearInterval(scan);
+
+
+      percent.textContent =
+        "100%";
+
+
+      setTimeout(() => {
+
+        result.style.display =
+          "block";
+
+
+        setTimeout(() => {
+
+          card.style.display =
+            "block";
+
+
+          card.scrollIntoView({
+            behavior:"smooth",
+            block:"center"
+          });
+
+        },1200);
+
+      },500);
+
+    }
+
+  },50);
+
+}
+
+
+/* =====================================================
+   SECRET CARD REVEAL
+===================================================== */
+
+function revealSecretCard(){
+
+  const card =
+    document.getElementById("secretCard");
+
+  const question =
+    document.getElementById("realQuestion");
+
+
+  card.classList.add("revealed");
+
+
+  setTimeout(() => {
+
+    question.style.display =
+      "block";
+
+
+    question.scrollIntoView({
+      behavior:"smooth",
+      block:"center"
+    });
+
+  },1200);
+
+}
+
+
+/* =====================================================
+   FINAL ANSWERS
+===================================================== */
+
+function finalAnswer(choice){
+
+  const result =
+    document.getElementById("answerResult");
+
+  const emoji =
+    document.getElementById("answerEmoji");
+
+  const title =
+    document.getElementById("answerTitle");
+
+  const text =
+    document.getElementById("answerText");
+
+  const ending =
+    document.getElementById("finalEnding");
+
+
+  result.style.display = "block";
+
+
+  if(choice === 1){
+
+    emoji.innerHTML = "😏";
+
+    title.innerHTML =
+      "A LITTLE BIT?!";
+
+    text.innerHTML =
+      "After all these memories?! 😂 " +
+      "Nice try... I'm rejecting this answer. " +
+      "Please retake the exam. ❤️";
+
+  }
+
+
+  else if(choice === 2){
+
+    emoji.innerHTML = "👀";
+
+    title.innerHTML =
+      "Hmm... suspicious.";
+
+    text.innerHTML =
+      "More than you expected ah? 😂 " +
+      "I think your heart is hiding " +
+      "something from me. ❤️";
+
+  }
+
+
+  else if(choice === 3){
+
+    emoji.innerHTML = "🥰";
+
+    title.innerHTML =
+      "I KNEW IT! ❤️";
+
+    text.innerHTML =
+      "Finally, an honest answer! 😂❤️ " +
+      "This answer has officially been " +
+      "saved in my heart forever.";
+
+  }
+
+
+  else if(choice === 4){
+
+    emoji.innerHTML = "🥹";
+
+    title.innerHTML =
+      "NOW THAT'S LOVE. ❤️";
+
+    text.innerHTML =
+      "Not only during the happy moments... " +
+      "but through every up and down. " +
+      "That's exactly what I want too. 🤍";
+
+  }
+
+
+  else if(choice === 5){
+
+    emoji.innerHTML = "♾️";
+
+    title.innerHTML =
+      "EXAM ANSWER: ACCEPTED ❤️";
+
+    text.innerHTML =
+      "No measurement? Hmm... okay. 😂 " +
+      "Then I guess I'll spend the rest of " +
+      "our story finding out just how much.";
+
+  }
+
+
+  ending.style.display =
+    "block";
+
+
+  ending.scrollIntoView({
+    behavior:"smooth",
+    block:"center"
+  });
+
+}
+
+
+/* =====================================================
    INITIALIZE
-===================================== */
+===================================================== */
 
 showSection(0);
 
