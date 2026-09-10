@@ -34,6 +34,8 @@
             z-index: -2;
         }
 
+        /* Floating hearts */
+
         .heart {
             position: fixed;
             bottom: -30px;
@@ -79,10 +81,12 @@
             }
         }
 
+        /* Main box */
+
         .secret-box {
-            width: 90%;
-            max-width: 520px;
-            padding: 45px 30px;
+            width: 94%;
+            max-width: 1050px;
+            padding: 28px 35px;
             background: rgba(255, 255, 255, 0.96);
             border-radius: 25px;
             text-align: center;
@@ -103,51 +107,76 @@
         }
 
         .lock {
-            font-size: 48px;
+            font-size: 42px;
         }
 
         h1 {
-            font-size: 34px;
-            margin: 10px 0;
+            font-size: 32px;
+            margin: 5px 0;
         }
 
         .subtitle {
             color: #666;
-            line-height: 1.7;
+            line-height: 1.5;
+            margin: 8px 0;
         }
 
         .line {
             width: 60px;
             height: 1px;
             background: #888;
-            margin: 25px auto;
+            margin: 15px auto 20px;
         }
+
+        /* TWO SIDE-BY-SIDE SECTIONS */
+
+        .secret-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            width: 100%;
+        }
+
+        .secret-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Clue boxes */
 
         .hint {
             background: #f2f2f2;
-            border-radius: 15px;
-            padding: 20px;
-            margin: 20px 0;
-            line-height: 1.7;
+            border-radius: 18px;
+            padding: 22px 20px;
+            line-height: 1.5;
             font-size: 15px;
+            min-height: 205px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .hint-title {
             font-weight: bold;
-            font-size: 17px;
+            font-size: 19px;
+            margin-bottom: 15px;
         }
+
+        /* Input labels */
 
         .input-title {
             display: block;
             text-align: left;
-            margin: 15px auto 7px;
-            width: 85%;
-            font-size: 14px;
+            margin: 14px 0 7px;
+            width: 100%;
+            font-size: 15px;
             font-weight: bold;
         }
 
+        /* Inputs */
+
         input {
-            width: 85%;
+            width: 100%;
             padding: 14px;
             border: 1px solid #bbb;
             border-radius: 12px;
@@ -161,9 +190,11 @@
             border-color: #555;
         }
 
+        /* Button */
+
         button {
-            margin-top: 22px;
-            padding: 15px 30px;
+            margin-top: 20px;
+            padding: 14px 30px;
             border: none;
             border-radius: 12px;
             background: #222;
@@ -178,17 +209,45 @@
             transform: scale(1.04);
         }
 
+        /* Message */
+
         #message {
-            margin-top: 20px;
-            min-height: 24px;
+            margin-top: 12px;
+            min-height: 22px;
             font-size: 15px;
             font-weight: bold;
         }
 
+        /* Footer */
+
         .footer {
-            margin-top: 25px;
+            margin-top: 12px;
             font-size: 13px;
             color: #888;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 700px) {
+
+            body {
+                overflow-y: auto;
+                padding: 15px 0;
+            }
+
+            .secret-box {
+                width: 94%;
+                padding: 25px 18px;
+            }
+
+            .secret-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .hint {
+                min-height: auto;
+            }
         }
     </style>
 </head>
@@ -196,6 +255,7 @@
 <body>
 
     <!-- Floating hearts -->
+
     <div class="heart">♡</div>
     <div class="heart">♥</div>
     <div class="heart">♡</div>
@@ -217,76 +277,92 @@
         <div class="line"></div>
 
 
-        <!-- SECRET WORD CLUE -->
+        <!-- TWO SIDE-BY-SIDE SECTIONS -->
 
-        <div class="hint">
+        <div class="secret-container">
 
-            <div class="hint-title">
-                🔑 Secret Word Clue
+
+            <!-- LEFT: SECRET WORD -->
+
+            <div class="secret-section">
+
+                <div class="hint">
+
+                    <div class="hint-title">
+                        🔑 Secret Word Clue
+                    </div>
+
+                    It's a little word that makes my heart smile
+                    every time I hear it. ❤️
+
+                    <br><br>
+
+                    <em>
+                        Think about what you call me... 👀
+                    </em>
+
+                </div>
+
+                <label class="input-title">
+                    🔑 Secret Word
+                </label>
+
+                <input
+                    type="password"
+                    id="secretWord"
+                    placeholder="Enter secret word"
+                >
+
             </div>
 
-            <br>
 
-            It's a little word that makes my heart smile
-            every time I hear it. ❤️
+            <!-- RIGHT: PIN -->
 
-            <br><br>
+            <div class="secret-section">
 
-            <em>
-                Think about what you call me... 👀
-            </em>
+                <div class="hint">
+
+                    <div class="hint-title">
+                        🔢 PIN Clue
+                    </div>
+
+                    Unga life-la oru special date... ❤️
+
+                    <br>
+
+                    Enoda life-la oru special date... 🥰
+
+                    <br><br>
+
+                    Rendu dates-um serndha dhaan
+                    namma little secret. ❤️
+
+                    <br><br>
+
+                    <em>
+                        Guess the PIN... 👀🔐
+                    </em>
+
+                </div>
+
+                <label class="input-title">
+                    🔢 PIN Number
+                </label>
+
+                <input
+                    type="password"
+                    id="pinNumber"
+                    placeholder="Enter PIN"
+                    inputmode="numeric"
+                    maxlength="6"
+                >
+
+            </div>
 
         </div>
 
 
-        <label class="input-title">
-            🔑 Secret Word
-        </label>
-
-        <input
-            type="password"
-            id="secretWord"
-            placeholder="Enter secret word"
-        >
-
-
-        <!-- PIN CLUE -->
-
-        <div class="hint">
-
-           <div class="hint-title">
-               🔢 PIN Clue
-           </div>
-
-           <br>
-
-           Unga life-la oru special date... ❤️
-           <br>
-           Enoda life-la oru special date... 🥰
-           <br><br>
-
-         Rendu dates-um serndha dhaan
-         namma little secret. ❤️
-         <br><br>
-
-    <em>Guess the PIN... 👀🔐</em>
-
-</div>
-
-        <label class="input-title">
-            🔢 PIN Number
-        </label>
-
-        <input
-            type="password"
-            id="pinNumber"
-            placeholder="Enter PIN"
-            inputmode="numeric"
-            maxlength="6"
-        >
-
-
-        <br>
+        <!-- UNLOCK BUTTON -->
 
         <button onclick="unlockStory()">
             Unlock Our Story ❤️
@@ -319,9 +395,12 @@
                 .trim();
 
 
-            /* CHANGE THESE TWO VALUES */
+            /* SECRET WORD */
 
             const secretWord = "konjeee";
+
+
+            /* PIN */
 
             const secretPin = "1427";
 
@@ -345,12 +424,14 @@
 
             }
 
+
             else if (enteredWord !== secretWord) {
 
                 document.getElementById("message").innerHTML =
                     "💕 The secret word isn't correct. Think again...";
 
             }
+
 
             else if (enteredPin !== secretPin) {
 
