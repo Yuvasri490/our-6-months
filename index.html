@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Just For You ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #eeeeee;
+            color: #222;
+            font-family: Georgia, "Times New Roman", serif;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-image: radial-gradient(#aaa 1px, transparent 1px);
+            background-size: 25px 25px;
+            opacity: 0.25;
+            z-index: -2;
+        }
+
+        .heart {
+            position: fixed;
+            bottom: -30px;
+            font-size: 22px;
+            opacity: 0.5;
+            animation: floatUp 8s linear infinite;
+            z-index: -1;
+        }
+
+        .heart:nth-child(1) {
+            left: 10%;
+            animation-delay: 1s;
+        }
+
+        .heart:nth-child(2) {
+            left: 30%;
+            animation-delay: 4s;
+        }
+
+        .heart:nth-child(3) {
+            left: 55%;
+            animation-delay: 2s;
+        }
+
+        .heart:nth-child(4) {
+            left: 80%;
+            animation-delay: 6s;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: translateY(-110vh);
+                opacity: 0;
+            }
+        }
+
+        .secret-box {
+            width: 90%;
+            max-width: 520px;
+            padding: 45px 30px;
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+            animation: appear 1.2s ease;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .lock {
+            font-size: 48px;
+        }
+
+        h1 {
+            font-size: 34px;
+            margin: 10px 0;
+        }
+
+        .subtitle {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .line {
+            width: 60px;
+            height: 1px;
+            background: #888;
+            margin: 25px auto;
+        }
+
+        .hint {
+            background: #f2f2f2;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        .hint-title {
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        .input-title {
+            display: block;
+            text-align: left;
+            margin: 15px auto 7px;
+            width: 85%;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 85%;
+            padding: 14px;
+            border: 1px solid #bbb;
+            border-radius: 12px;
+            outline: none;
+            font-size: 16px;
+            text-align: center;
+            background: white;
+        }
+
+        input:focus {
+            border-color: #555;
+        }
+
+        button {
+            margin-top: 22px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 12px;
+            background: #222;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #555;
+            transform: scale(1.04);
+        }
+
+        #message {
+            margin-top: 20px;
+            min-height: 24px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .footer {
+            margin-top: 25px;
+            font-size: 13px;
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Floating hearts -->
+    <div class="heart">♡</div>
+    <div class="heart">♥</div>
+    <div class="heart">♡</div>
+    <div class="heart">♥</div>
+
+
+    <div class="secret-box">
+
+        <div class="lock">🔐</div>
+
+        <h1>Just For You ❤️</h1>
+
+        <p class="subtitle">
+            Before you enter our little world...
+            <br>
+            there are two little secrets you need to remember. ✨
+        </p>
+
+        <div class="line"></div>
+
+
+        <!-- SECRET WORD CLUE -->
+
+        <div class="hint">
+
+            <div class="hint-title">
+                🔑 Secret Word Clue
+            </div>
+
+            <br>
+
+            It's a little word that makes my heart smile
+            every time I hear it. ❤️
+
+            <br><br>
+
+            <em>
+                Think about what you call me... 👀
+            </em>
+
+        </div>
+
+
+        <label class="input-title">
+            🔑 Secret Word
+        </label>
+
+        <input
+            type="password"
+            id="secretWord"
+            placeholder="Enter secret word"
+        >
+
+
+        <!-- PIN CLUE -->
+
+        <div class="hint">
+
+           <div class="hint-title">
+               🔢 PIN Clue
+           </div>
+
+           <br>
+
+           Un life-la oru special date... ❤️
+           <br>
+           En life-la oru special date... 🥰
+           <br><br>
+
+         Rendu dates-um serndha dhaan
+         namma little secret. ❤️
+         <br><br>
+
+    <em>Guess the PIN... 👀🔐</em>
+
+</div>
+
+        <label class="input-title">
+            🔢 PIN Number
+        </label>
+
+        <input
+            type="password"
+            id="pinNumber"
+            placeholder="Enter PIN"
+            inputmode="numeric"
+            maxlength="6"
+        >
+
+
+        <br>
+
+        <button onclick="unlockStory()">
+            Unlock Our Story ❤️
+        </button>
+
+
+        <div id="message"></div>
+
+
+        <div class="footer">
+            Six months. Countless memories. One beautiful us. ❤️
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function unlockStory() {
+
+            const enteredWord =
+                document.getElementById("secretWord")
+                .value
+                .trim()
+                .toLowerCase();
+
+            const enteredPin =
+                document.getElementById("pinNumber")
+                .value
+                .trim();
+
+
+            /* CHANGE THESE TWO VALUES */
+
+            const secretWord = "konjeee";
+
+            const secretPin = "1427";
+
+
+            /* CHECK BOTH */
+
+            if (
+                enteredWord === secretWord &&
+                enteredPin === secretPin
+            ) {
+
+                document.getElementById("message").innerHTML =
+                    "✨ You remembered both! Our story is waiting for you... ❤️";
+
+                setTimeout(function () {
+
+                    window.location.href =
+                        "our_6_months_website_white_grey.html";
+
+                }, 1500);
+
+            }
+
+            else if (enteredWord !== secretWord) {
+
+                document.getElementById("message").innerHTML =
+                    "💕 The secret word isn't correct. Think again...";
+
+            }
+
+            else if (enteredPin !== secretPin) {
+
+                document.getElementById("message").innerHTML =
+                    "🔢 The PIN isn't correct. Think about our special date...";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
